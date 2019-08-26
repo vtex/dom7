@@ -80,6 +80,7 @@ function es(cb) {
   rollup.rollup({
     input: './src/dom7.js',
     external: ['ssr-window'],
+    plugins: [buble()],
   }).then((bundle) => {
     return bundle.write({
       strict: true,
@@ -98,6 +99,7 @@ function es(cb) {
   rollup.rollup({
     input: './src/dom7.modular.js',
     external: ['ssr-window'],
+    plugins: [buble()],
   }).then((bundle) => {
     return bundle.write({
       strict: true,
